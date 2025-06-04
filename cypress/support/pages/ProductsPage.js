@@ -1,6 +1,5 @@
 export class ProductsPage {
   getProductByIndex(index) {
-    // Los productos están en .product-image-wrapper (puede cambiar, inspeccionar en sitio)
     return cy.get('.product-image-wrapper').eq(index);
   }
 
@@ -11,5 +10,12 @@ export class ProductsPage {
       .contains('View Product')
       .click();
   }
-  
+
+  viewProductDetailsByName(productName) {
+    cy.contains('.productinfo', productName)
+      .parents('.product-image-wrapper')
+      .find('a')
+      .contains('View Product')
+      .click();
+  }
 }

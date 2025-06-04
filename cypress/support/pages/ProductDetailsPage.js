@@ -1,14 +1,13 @@
 export class ProductDetailsPage {
   enterQuantity(quantity) {
-    cy.get('#quantity').clear().type(quantity);
+    cy.get('#quantity').clear().type(quantity.toString());
   }
 
   addToCart() {
-    cy.get('.cart').click();
+    cy.get('.cart, .btn.btn-default.cart').first().click();
   }
 
   proceedToCheckout() {
-    cy.contains('a[href="/view_cart"]', 'View Cart').click();
-
+    cy.get('a[href="/view_cart"]').first().click();
   }
 }

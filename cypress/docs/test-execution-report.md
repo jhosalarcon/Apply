@@ -1,24 +1,24 @@
-📄 Test Execution Report
+## Test Execution Report
+
 Project: AutomationExercise E2E Test
-Tester: [Tu Nombre]
-Fecha de ejecución: 4 de junio de 2025
+Tester: Jhosmary Alarcón
+Execution Date: June 4, 2025
 Framework: Cypress
-Diseño: Page Object Model (POM)
+Design: Page Object Model (POM)
 
-| Paso | Descripción                        | Resultado |
-| ---- | ---------------------------------- | --------- |
-| 1    | Navegar al sitio web               | ✅ Passed  |
-| 2    | Ir a Products                      | ✅ Passed  |
-| 3    | Ver detalles del tercer producto   | ✅ Passed  |
-| 4    | Ingresar cantidad aleatoria (1–20) | ✅ Passed  |
-| 5    | Agregar al carrito                 | ✅ Passed  |
-| 6    | Ir al carrito y hacer checkout     | ✅ Passed  |
-| 7    | Registrar nuevo usuario con Faker  | ✅ Passed  |
-| 8    | Validar el resumen de orden        | ✅ Passed  |
-| 9    | Logout exitoso                     | ✅ Passed  |
+| Step | Description                       | Result    |
+| ---- | --------------------------------- | --------- |
+| 1    | Navigate to the website           | ✅ Passed |
+| 2    | Go to Products                    | ✅ Passed |
+| 3    | View details of the third product | ✅ Passed |
+| 4    | Enter a random quantity (1–20)    | ✅ Passed |
+| 5    | Add to cart                       | ✅ Passed |
+| 6    | Go to cart and checkout           | ✅ Passed |
+| 7    | Register new user with Faker      | ✅ Passed |
+| 8    | Validate order summary            | ✅ Passed |
+| 9    | Successful logout                 | ✅ Passed |
 
-
-| Métrica       | Puntaje (Lighthouse) |
-| ------------- | -------------------- |
-| Accessibility | 91                   |
-| Performance   | 83                   |
+| Metric        | Score (Lighthouse) |
+| ------------- | ------------------ |
+| Accessibility | 91                 |
+| Performance   | 83                 |

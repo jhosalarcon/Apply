@@ -3,14 +3,13 @@ export class AuthPage {
     cy.contains('a[href="/login"]', 'Signup / Login').click();
   }
 
-  register(name, email) {
+  fillSignupForm({ name, email, password }) {
     cy.get('input[data-qa="signup-name"]').type(name);
     cy.get('input[data-qa="signup-email"]').type(email);
     cy.get('button[data-qa="signup-button"]').click();
 
-    // Espera al formulario de detalles (Signup)
     cy.get('input[id="id_gender1"]').check();
-    cy.get('input[id="password"]').type('TestPassword123!');
+    cy.get('input[id="password"]').type(password);
     cy.get('select[id="days"]').select('10');
     cy.get('select[id="months"]').select('May');
     cy.get('select[id="years"]').select('1995');
@@ -22,11 +21,17 @@ export class AuthPage {
     cy.get('input[id="city"]').type('City');
     cy.get('input[id="zipcode"]').type('12345');
     cy.get('input[id="mobile_number"]').type('1234567890');
-    cy.get('button[data-qa="create-account"]').click();
+  }
 
-    // Confirmación de cuenta creada
+  submitSignup() {
+    cy.get('button[data-qa="create-account"]').click();
     cy.contains('Account Created!').should('be.visible');
     cy.get('a[data-qa="continue-button"]').click();
+  }
+
+  register(name, email, password = 'TestPassword123!') {
+    this.fillSignupForm({ name, email, password });
+    this.submitSignup();
   }
 
   logout() {

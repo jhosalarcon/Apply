@@ -1,5 +1,5 @@
 export class CartPage {
   proceedToCheckout() {
-    cy.get('.check_out').click();
+    cy.contains("a", "Checkout").click();
   }
 }

@@ -1,11 +1,7 @@
 # Framework Selection: Cypress
 
-Elegimos Cypress por las siguientes razones:
+I chose Cypress mainly because it’s really easy to use—the syntax feels pretty close to JavaScript, which makes writing tests straightforward. It also doesn’t require any complicated setup or extra tools like Selenium, so it saves me a lot of time.
 
-- **Facilidad de uso:** Sintaxis sencilla y clara, muy parecida a JavaScript/Chai.
-- **Configuración mínima:** No requiere herramientas externas como Selenium Server.
-- **Soporte visual:** Cypress muestra el navegador durante las pruebas, lo que facilita la depuración.
-- **Comunidad activa:** Amplia documentación, plugins y ejemplos.
-- **Depuración potente:** Soporte automático de espera (`auto-waiting`) y snapshots en el DOM.
+One thing I really like is that Cypress shows the browser running the tests in real-time, which makes debugging way easier. Plus, there’s a big community with lots of plugins and examples that I can rely on.
 
-Alternativa como Playwright también es potente, pero Cypress fue elegido por su curva de aprendizaje más rápida y herramientas visuales.
+The debugging features like auto-waiting and DOM snapshots have been super helpful for understanding what’s going on at each step.
