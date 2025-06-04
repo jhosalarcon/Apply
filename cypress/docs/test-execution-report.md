@@ -1,10 +1,10 @@
-## Test Execution Report
+## Test execution report
 
-Project: AutomationExercise E2E Test
-Tester: Jhosmary Alarcón
-Execution Date: June 4, 2025
-Framework: Cypress
-Design: Page Object Model (POM)
+- **Project**: AutomationExercise E2E Test
+- **Tester**: Jhosmary Alarcón
+- **Execution date**: June 4, 2025
+- **Framework**: Cypress
+- **Design**: Page Object Model (POM)
 
 | Step | Description                       | Result    |
 | ---- | --------------------------------- | --------- |
