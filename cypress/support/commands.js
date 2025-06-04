@@ -1,6 +1,5 @@
 import { faker } from '@faker-js/faker';
 
-// Comando para registrar usuario con datos aleatorios y password configurable
 Cypress.Commands.add('registerRandomUser', (password = 'TestPassword123!') => {
   const name = faker.name.fullName();
   const email = faker.internet.email();
@@ -9,7 +8,6 @@ Cypress.Commands.add('registerRandomUser', (password = 'TestPassword123!') => {
   cy.get('input[data-qa="signup-email"]').type(email);
   cy.get('button[data-qa="signup-button"]').click();
 
-  // Rellenar formulario de registro (puedes refactorizar para usar métodos page object)
   cy.get('input[id="id_gender1"]').check();
   cy.get('input[id="password"]').type(password);
   cy.get('select[id="days"]').select('10');
@@ -28,18 +26,15 @@ Cypress.Commands.add('registerRandomUser', (password = 'TestPassword123!') => {
   cy.contains('Account Created!').should('be.visible');
   cy.get('a[data-qa="continue-button"]').click();
 
-  // Retornar info para usar después si se quiere
   cy.wrap({ name, email, password }).as('registeredUser');
 });
 
-// Login simplificado
 Cypress.Commands.add('login', (email, password) => {
   cy.get('input[data-qa="login-email"]').type(email);
   cy.get('input[data-qa="login-password"]').type(password);
   cy.get('button[data-qa="login-button"]').click();
 });
 
-// Agregar producto con cantidad
 Cypress.Commands.add('addProductToCart', (quantity) => {
   cy.get('#quantity').clear().type(quantity.toString());
   cy.get('.btn.btn-default.cart').click();

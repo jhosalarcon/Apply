@@ -19,7 +19,6 @@ viewports.forEach(({ device, width, height }) => {
       cy.viewport(width, height);
       cy.log(`Running test on ${device} viewport`);
 
-      // Crear instancias dentro del test
       const homePage = new HomePage();
       const productsPage = new ProductsPage();
       const productDetailsPage = new ProductDetailsPage();
@@ -31,7 +30,6 @@ viewports.forEach(({ device, width, height }) => {
       homePage.visit();
       homePage.goToProducts();
 
-      // Usa índice si no tienes viewProductDetailsByName
       productsPage.viewProductDetails(2);
 
       const quantity = getRandomQuantity();
