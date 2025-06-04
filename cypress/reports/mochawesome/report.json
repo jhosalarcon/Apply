@@ -1,0 +1,145 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "start": "2025-06-04T14:41:01.725Z",
+    "end": "2025-06-04T14:41:33.743Z",
+    "duration": 32018
+  },
+  "results": [
+    {
+      "uuid": "e6862802-f5c4-4eba-bb3c-77f5e99bdd99",
+      "title": "",
+      "fullFile": "cypress/e2e/navigateWebsite.cy.js",
+      "file": "cypress/e2e/navigateWebsite.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "71121eeb-e393-4dd5-b500-eb5a21805adc",
+          "title": "Full Product Purchase Flow with Registration - Desktop viewport",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should register, add product to cart, confirm order and logout on Desktop",
+              "fullTitle": "Full Product Purchase Flow with Registration - Desktop viewport should register, add product to cart, confirm order and logout on Desktop",
+              "timedOut": null,
+              "duration": 16386,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.viewport(width, height);\ncy.log(`Running test on ${device} viewport`);\n// Crear instancias dentro del test\nconst homePage = new _HomePage.HomePage();\nconst productsPage = new _ProductsPage.ProductsPage();\nconst productDetailsPage = new _ProductDetailsPage.ProductDetailsPage();\nconst authPage = new _AuthPage.AuthPage();\nconst name = _faker.faker.person.firstName();\nconst email = _faker.faker.internet.email();\nhomePage.visit();\nhomePage.goToProducts();\n// Usa índice si no tienes viewProductDetailsByName\nproductsPage.viewProductDetails(2);\nconst quantity = getRandomQuantity();\nproductDetailsPage.enterQuantity(quantity);\nproductDetailsPage.addToCart();\nproductDetailsPage.proceedToCheckout();\nauthPage.clickSignupLogin();\nauthPage.register(name, email);\nhomePage.goToCart();\ncy.get(\"a.check_out\").click();\ncy.contains(\"Review Your Order\").should(\"exist\");\nauthPage.logout();",
+              "err": {},
+              "uuid": "ccccab82-e706-41a1-86bc-ca9ddd7d1e3b",
+              "parentUUID": "71121eeb-e393-4dd5-b500-eb5a21805adc",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ccccab82-e706-41a1-86bc-ca9ddd7d1e3b"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 16386,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "af453ad0-2d87-4c28-9736-7708c8d59b7a",
+          "title": "Full Product Purchase Flow with Registration - Mobile viewport",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should register, add product to cart, confirm order and logout on Mobile",
+              "fullTitle": "Full Product Purchase Flow with Registration - Mobile viewport should register, add product to cart, confirm order and logout on Mobile",
+              "timedOut": null,
+              "duration": 15537,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.viewport(width, height);\ncy.log(`Running test on ${device} viewport`);\n// Crear instancias dentro del test\nconst homePage = new _HomePage.HomePage();\nconst productsPage = new _ProductsPage.ProductsPage();\nconst productDetailsPage = new _ProductDetailsPage.ProductDetailsPage();\nconst authPage = new _AuthPage.AuthPage();\nconst name = _faker.faker.person.firstName();\nconst email = _faker.faker.internet.email();\nhomePage.visit();\nhomePage.goToProducts();\n// Usa índice si no tienes viewProductDetailsByName\nproductsPage.viewProductDetails(2);\nconst quantity = getRandomQuantity();\nproductDetailsPage.enterQuantity(quantity);\nproductDetailsPage.addToCart();\nproductDetailsPage.proceedToCheckout();\nauthPage.clickSignupLogin();\nauthPage.register(name, email);\nhomePage.goToCart();\ncy.get(\"a.check_out\").click();\ncy.contains(\"Review Your Order\").should(\"exist\");\nauthPage.logout();",
+              "err": {},
+              "uuid": "491a64d0-b592-4d10-b370-b2f393da3dd9",
+              "parentUUID": "af453ad0-2d87-4c28-9736-7708c8d59b7a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "491a64d0-b592-4d10-b370-b2f393da3dd9"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 15537,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mochawesome",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
