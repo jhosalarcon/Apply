@@ -10,7 +10,7 @@ This project contains an automated end-to-end test for the [AutomationExercise](
 - `cypress.config.js` — Cypress configuration file
 - `package.json` — Project dependencies and scripts
 - `cypress/reports/mochawesome/` — Generated Mochawesome JSON and HTML reports
-- `cypress/docs/` — Lighthouse accessibility and performance reports
+- `cypress/docs/` — Testing documentation, lighthouse accessibility and performance reports
 
 ## Prerequisites
 
@@ -29,9 +29,9 @@ This project contains an automated end-to-end test for the [AutomationExercise](
 
 2. Install dependencies
 
-```bash
-    npm install
-```
+   ```bash
+   npm install
+   ```
 
 ## Running tests
 
@@ -49,7 +49,7 @@ After tests finish running, generate a consolidated Mochawesome HTML report by r
 npm run report
 ```
 
-Open the report at cypress/reports/mochawesome/final/report.html in your browser to view detailed test results.
+Open the report at **cypress/reports/mochawesome/final/report.html** in your browser to view detailed test results.
 
 ## Accessibility and Performance Testing
 
@@ -59,4 +59,10 @@ You can run Lighthouse audits for accessibility and performance on the homepage 
 npm run lighthouse
 ```
 
-This will generate an HTML report in the cypress/docs/ directory.
+This will generate an HTML report in the **cypress/docs/** directory.
+
+
+## Testing documentation
+- Framework Selection: Cypress -> **cypress/docs/framework-justification.md**
+- Test case flow -> **cypress/docs/test-case-flow.md**
+- Test execution report -> **cypress/docs/test-execution-report.md**
